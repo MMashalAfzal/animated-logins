@@ -1,0 +1,170 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: arial;
+}
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background:  #1f293a;
+}
+
+.container{
+position: relative;
+width: 256px;
+height: 256px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container span{
+position: absolute;
+left: 0;
+width:32px;
+height: 6px;
+background: #2c4766;
+border-radius: 8px;
+transform-origin: 128px;
+transform: scale(2.2) rotate(calc(var(--i)* 360deg / 50));
+animation: animateBlink 2s linear infinite;
+animation-delay: calc(var(--i)* (2s / 50));
+}
+
+@keyframes animateBlink{
+
+	0%{
+	background: lime;
+		
+	}
+
+		99%{
+	background: seagreen;
+		
+	}
+
+	
+}
+
+
+
+
+
+
+
+.login-box{
+position: absolute;
+width: 400px;
+/*background: orange;*/
+}
+
+.login-box form{
+width: 100%;
+padding: 0 50px;
+}
+
+h2{
+font-size: 3em;
+color: lime;
+text-align: center;
+}
+
+.input-box{
+position: relative;
+margin: 25px 0;
+}
+
+.input-box input{
+width: 100%;
+height: 50px;
+background: transparent;
+border: 2px solid green;
+outline: none;
+border-radius: 40px;
+font-size: 1em;
+color: white;
+padding: 0 20px;
+transition: .5s ease;
+}
+
+
+.input-box input:focus,
+.input-box input:valid{
+
+	border-color: lime;
+}
+
+
+
+
+.input-box lable{
+position: absolute;
+top: 50%;
+left: 20px;
+transform: translateY(-50%);
+font-size: 1em;
+color: white;
+pointer-events: none;
+transition: .5s ease;
+}
+
+.input-box input:focus~lable,
+.input-box input:valid~lable{
+
+top: 1px;
+font-size: .8em;
+background: #1f293a;
+padding: 0 6px;
+color: lime;
+
+}
+
+
+.forgot-pass{
+margin: -15px 0 10px;
+text-align: center;
+}
+
+.forgot-pass a{
+font-size: .80em;
+color: white;
+text-decoration: none;
+}
+
+.forgot-pass a:hover{
+text-decoration: underline;	
+}
+
+.btn{
+width: 100%;
+height: 45px;
+background: lime;
+border: none;
+outline: none;
+border-radius: 50px;
+cursor: pointer;
+font-size: 1em;
+color: white;
+font-weight: 600;
+}
+
+.signup-link{
+margin: 20px 0 10px;
+text-align: center;
+}
+
+.signup-link a{
+font-size: 1em;
+color: lime;
+text-decoration: none;
+font-weight: 600;
+}
+
+.signup-link a:hover{
+text-decoration: underline;
+
+}
